@@ -1,3 +1,17 @@
 This is the OpenCV CinderBlock, designed for use with the open-source C++ library Cinder: http://libcinder.org
 
 Integrates OpenCV 2.3.
+
+If you are using any other modules other than the core: 
+
+You must Add to my target's "Other Linker Flags" (both debug and release) to get any non-samples running:
+
+example: Macosx
+
+$(CINDER_PATH)/blocks/lib/macosx/libopencv_XXXX.a
+
+example: iOS 
+
+$(CINDER_PATH)/blocks/lib/ios/libopencv_XXXX.a
+
+Failure to link the libraries will cause compile time errors because the classes cannot be found.
